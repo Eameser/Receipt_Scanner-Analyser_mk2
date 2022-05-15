@@ -1,0 +1,42 @@
+{
+  "first_pagetext_1": "Загрузите свой чек",
+  "first_pagetext_2": "Камера",
+  "first_pagetext_3": "Галлерея",
+  "first_pagetext_4": "СКАН",
+
+  "details_pagetext_1": "Детали чека",
+  "details_pagetext_2": "Налог",
+  "details_pagetext_3": "Итог",
+  "details_pagetext_4": "Добавить товар",
+  "details_pagetext_5": "Название товара",
+  "details_pagetext_6": "Цена за еденицу",
+  "details_pagetext_7": "Количество",
+  "details_pagetext_8": "Подтвердить",
+
+  "second_pagetext_1": "Библиотека чеков",
+  "second_pagetext_2": "Январь",
+  "second_pagetext_3": "Февраль",
+  "second_pagetext_4": "Март",
+  "second_pagetext_5": "Апрель",
+  "second_pagetext_6": "Май",
+  "second_pagetext_7": "Июнь",
+  "second_pagetext_8": "Июль",
+  "second_pagetext_9": "Август",
+  "second_pagetext_10": "Сентябрь",
+  "second_pagetext_11": "Октябрь",
+  "second_pagetext_12": "Ноябрь",
+  "second_pagetext_13": "Декабрь",
+
+  "third_pagetext_1": "Аналитика расходов",
+  "third_pagetext_2": "За все время",
+  "third_pagetext_3": "Вы потратили ",
+  "third_pagetext_4": "Вы купили ",
+  "third_pagetext_5": " товаров",
+  "third_pagetext_6": "Самый дорогой товар (название): ",
+  "third_pagetext_7": "Самый дорогой товар (цена): ",
+  "third_pagetext_8": "Любимый товар: ",
+
+  "fourth_pagetext_1": "Настройки",
+  "fourth_pagetext_2": "Язык",
+  "fourth_pagetext_3": "Тема"
+}

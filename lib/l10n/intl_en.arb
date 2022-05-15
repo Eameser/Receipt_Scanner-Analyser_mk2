@@ -1,0 +1,42 @@
+{
+  "first_pagetext_1": "Load your receipt",
+  "first_pagetext_2": "Camera",
+  "first_pagetext_3": "Gallery",
+  "first_pagetext_4": "SCAN",
+
+  "details_pagetext_1": "Receipt details",
+  "details_pagetext_2": "Tax",
+  "details_pagetext_3": "Total",
+  "details_pagetext_4": "Add an item",
+  "details_pagetext_5": "Item name",
+  "details_pagetext_6": "Unit cost",
+  "details_pagetext_7": "Amount",
+  "details_pagetext_8": "Accept",
+
+  "second_pagetext_1": "Receipts library",
+  "second_pagetext_2": "January",
+  "second_pagetext_3": "February",
+  "second_pagetext_4": "March",
+  "second_pagetext_5": "April",
+  "second_pagetext_6": "May",
+  "second_pagetext_7": "June",
+  "second_pagetext_8": "July",
+  "second_pagetext_9": "August",
+  "second_pagetext_10": "September",
+  "second_pagetext_11": "October",
+  "second_pagetext_12": "November",
+  "second_pagetext_13": "December",
+
+  "third_pagetext_1": "Сonsumption analytics",
+  "third_pagetext_2": "All time",
+  "third_pagetext_3": "You spent ",
+  "third_pagetext_4": "You bought ",
+  "third_pagetext_5": " items",
+  "third_pagetext_6": "Most expensive item (name): ",
+  "third_pagetext_7": "Most expensive item (price): ",
+  "third_pagetext_8": "Favourite product: ",
+
+  "fourth_pagetext_1": "Options",
+  "fourth_pagetext_2": "Language",
+  "fourth_pagetext_3": "Theme"
+}

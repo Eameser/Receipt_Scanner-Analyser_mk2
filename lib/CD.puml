@@ -1,0 +1,183 @@
+@startuml
+set namespaceSeparator ::
+
+class "nomldemo::details.dart::Details" {
+  +VisionText? vtext
+  +_DetailsState createState()
+}
+
+"nomldemo::details.dart::Details" o-- "firebase_ml_vision::firebase_ml_vision.dart::VisionText"
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "nomldemo::details.dart::Details"
+
+class "nomldemo::details.dart::_DetailsState" {
+  -GlobalKey<ScaffoldState> _key
+  -TextEditingController? _noteController
+  -DateTime _cD
+  +dynamic receiptInfo
+  +bool receiptReady
+  +Future<dynamic> getReceiptInfo()
+  +void initState()
+  +Widget build()
+  +Future<dynamic> acceptChanges()
+  +void addNewItem()
+}
+
+"nomldemo::details.dart::_DetailsState" o-- "flutter::src::widgets::framework.dart::GlobalKey<ScaffoldState>"
+"nomldemo::details.dart::_DetailsState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"flutter::src::widgets::framework.dart::State" <|-- "nomldemo::details.dart::_DetailsState"
+
+class "nomldemo::main.dart::MyApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "nomldemo::main.dart::MyApp"
+
+class "nomldemo::pages::navpages::additional::confirn_helper.dart::WordBox" {
+  +String? text
+  +List<List<num>>? vertices
+  +List<List<num>>? boundingBox
+  +num? lineNum
+  +List<dynamic> match
+  +bool matched
+  +dynamic setBox()
+  +dynamic pushMatch()
+  +dynamic setlineNum()
+  +dynamic setMatched()
+}
+
+class "nomldemo::pages::navpages::additional::confirn_helper.dart::ConfirmHelper" {
+  {static} +num findSubtotal()
+  {static} +dynamic getItems()
+  {static} +dynamic getText()
+  {static} +dynamic constructLineWithBoundingPolygon()
+  {static} +String? arrangeWordsInOrder()
+  {static} +dynamic getBoundingPolygon()
+  {static} +dynamic combineBoundingPolygon()
+  {static} +List<num> getLineMesh()
+}
+
+class "nomldemo::pages::navpages::additional::user_dialog.dart::AddItem" {
+  +dynamic Function(Item) addNewItem
+  +_AddItemState createState()
+}
+
+"nomldemo::pages::navpages::additional::user_dialog.dart::AddItem" o-- "null::dynamic Function(Item)"
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "nomldemo::pages::navpages::additional::user_dialog.dart::AddItem"
+
+class "nomldemo::pages::navpages::additional::user_dialog.dart::_AddItemState" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "nomldemo::pages::navpages::additional::user_dialog.dart::_AddItemState"
+
+class "nomldemo::pages::navpages::analytics_page.dart::AnalyticsPage" {
+  -PageController _pageController
+  +int currentIndex
+  +Widget build()
+}
+
+"nomldemo::pages::navpages::analytics_page.dart::AnalyticsPage" o-- "flutter::src::widgets::page_view.dart::PageController"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "nomldemo::pages::navpages::analytics_page.dart::AnalyticsPage"
+
+class "nomldemo::pages::navpages::main_page.dart::MainPage" {
+  +_MainPageState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "nomldemo::pages::navpages::main_page.dart::MainPage"
+
+class "nomldemo::pages::navpages::main_page.dart::_MainPageState" {
+  +List<dynamic> pages
+  +int currentIndex
+  +void onTap()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "nomldemo::pages::navpages::main_page.dart::_MainPageState"
+
+class "nomldemo::pages::navpages::my_page.dart::MyPage" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "nomldemo::pages::navpages::my_page.dart::MyPage"
+
+class "nomldemo::pages::navpages::receipt_page.dart::ReceiptsLibraryPage" {
+  +_ReceiptsLibraryPageState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "nomldemo::pages::navpages::receipt_page.dart::ReceiptsLibraryPage"
+
+class "nomldemo::pages::navpages::receipt_page.dart::_ReceiptsLibraryPageState" {
+  -PageController _pageController
+  +int currentIndex
+  +double? aTotal
+  +double? aFinalTotal
+  +double? aMaxUnitCost
+  +RegExp april
+  +Widget build()
+  +String getStringFromDetails()
+}
+
+"nomldemo::pages::navpages::receipt_page.dart::_ReceiptsLibraryPageState" o-- "flutter::src::widgets::page_view.dart::PageController"
+"flutter::src::widgets::framework.dart::State" <|-- "nomldemo::pages::navpages::receipt_page.dart::_ReceiptsLibraryPageState"
+
+class "nomldemo::pages::navpages::scan_page.dart::WordBox" {
+  +String? text
+  +List<List<num>>? vertices
+  +List<List<num>>? boundingBox
+  +num? lineNum
+  +List<dynamic> match
+  +bool matched
+  +dynamic setBox()
+  +dynamic pushMatch()
+  +dynamic setlineNum()
+  +dynamic setMatched()
+}
+
+class "nomldemo::pages::navpages::scan_page.dart::ScanPage" {
+  +_ScanPageState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "nomldemo::pages::navpages::scan_page.dart::ScanPage"
+
+class "nomldemo::pages::navpages::scan_page.dart::_ScanPageState" {
+  -String _text
+  -PickedFile? _image
+  +ImagePicker picker
+  +VisionText? visionText
+  +Widget build()
+  +Future<dynamic> scanText()
+  +Future<dynamic> getImageCamera()
+  +Future<dynamic> getImageGallery()
+}
+
+"nomldemo::pages::navpages::scan_page.dart::_ScanPageState" o-- "image_picker_platform_interface::src::types::picked_file::unsupported.dart::PickedFile"
+"nomldemo::pages::navpages::scan_page.dart::_ScanPageState" o-- "image_picker::image_picker.dart::ImagePicker"
+"nomldemo::pages::navpages::scan_page.dart::_ScanPageState" o-- "firebase_ml_vision::firebase_ml_vision.dart::VisionText"
+"flutter::src::widgets::framework.dart::State" <|-- "nomldemo::pages::navpages::scan_page.dart::_ScanPageState"
+
+class "nomldemo::receipt.dart::Item" {
+  +String? name
+  +num? totalCost
+  +num? unitCost
+  +int? quantity
+}
+
+class "nomldemo::receipt.dart::ReceiptInfo" {
+  +String? dateTime
+  +List<dynamic>? items
+  +num? finalTotal
+  +num? finalTax
+  {static} +List<ReceiptInfo> recInfo
+}
+
+class "nomldemo::receipt.dart::AnalyticsInfo" {
+  +double? total
+  +double? maxPrice
+  +void changeTotal()
+  +void changeMaxPrice()
+}
+
+"flutter::src::foundation::change_notifier.dart::ChangeNotifier" <|-- "nomldemo::receipt.dart::AnalyticsInfo"
+
+
+@enduml
