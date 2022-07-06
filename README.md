@@ -31,3 +31,5 @@ This is jyly 6, so you can find scanned receipt in the relevant month page
 ![image](https://user-images.githubusercontent.com/91117744/177559981-a514d275-adf7-471f-96f9-f4f456df9e73.png)
 ![image](https://user-images.githubusercontent.com/91117744/177560037-9b9b0e01-0e95-4548-8929-eda4730f723f.png)
 ![image](https://user-images.githubusercontent.com/91117744/177560065-1072494e-c0b2-43c6-a1a7-7d1025e8c0c0.png)
+
+Unfortunately some of the packeges are not updated to support null safety but you can run the app by using this command in console so run the app: flutter run --no-sound-null-safety
